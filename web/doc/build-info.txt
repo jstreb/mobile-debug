@@ -1,0 +1,2 @@
+weinre build 2.0.0-pre-H0PB15MF-incubating by Jesse Streb
+git: 4318fe39f6fd4461029ae88a28dca98aaf53284f [CB-315] [weinre] generate valid Apache release artifact names
