@@ -25,85 +25,19 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="shortcut icon" href="images/weinre-icon-64x64.png" />
 <script src="versions.js"></script>
-<style>
-.underline {
-    border-bottom:          solid;
-}
-h1, h2 {
-    padding:                0.25em 0.50em;
-    background-color:       #DDD;
-    border-radius:          0.5em;
-    -moz-border-radius:     0.5em;
-    -webkit-border-radius:  0.5em;
-}
-td {
-    vertical-align:         top;
-}
-pre {
-    overflow:               auto;
-}
-textarea {
-    width:                  100%;
-}
-pre, .indent {
-    margin-left:            2em;
-}
-</style>
+<script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+<script>
+  $( document ).ready( function() {
+    $( "click" ).click( function() {
+      location.href = location.href + "client/#" + $( "#unique_id" ).val();
+    })
+  })
+</script>
 </head>
 <body>
-<h1>weinre - <span class="underline">we</span>b <span class="underline">in</span>spector <span class="underline">re</span>mote</h1>
-
-
-<h2>Access Points</h2>
-
-<table>
-<tr><td>debug client user interface: <td> <span id="url-client-ui">???</span>
-<tr><td>documentation:               <td> <span id="url-target-documentation">???</span>
-<tr><td>target demo:                 <td> <span id="url-target-demo-min">???</span> <br><span id="url-target-demo"></span>
-</table>
-
-<h2>Target Script</h2>
-
-<p>You can use this script to inject the weinre target code into your web page.
-
-<p class="indent"><code><span id="url-target-script">???</span></code>
-
-<p>Example:
-
-<pre>
-&ltscript src="<span id="url-target-script-raw">???</span>"&gt;&lt;/script&gt;
-</pre>
-
-<h2>Target Bookmarklet</h2>
-
-<p>You can use this bookmarklet to inject the weinre target code into any
-web page you are viewing.
-
-<p>link you can drag to your bookmarks:
-
-<div class="indent">
-<span id="url-target-bookmarklet">???</span>
-</div>
-
-<p>bookmarklet url in a pre:
-<pre id="target-bookmarklet-src-pre"></pre>
-
-<p>bookmarklet url in a textarea:
-<div class="indent">
-<textarea id="target-bookmarklet-src-text-area"></textarea>
-</div>
-
-<h2>Development</h2>
-
-<p>interfaces: <span id="url-interfaces">???</span>
-
-<h2>Versions</h2>
-
-<table>
-<tr><td>weinre: <td> <span id="version-weinre">???</span> 
-<tr><td>build:  <td> <span id="version-build">???</span>
-</table>
-
+<h1> Debug that shit son!</h1>
+<input id="unique_id" type="text" value="3737" />
+<div id="click">Click me!</div>
 <img src="images/weinre-icon-128x128.png">
 
 <script src="index.js"></script>
