@@ -24,6 +24,85 @@
 <title>weinre server home</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="shortcut icon" href="images/weinre-icon-64x64.png" />
+<style>
+  body {
+    font-family: arial, helvetica, sans-serif;
+    line-height: 1;
+    background: url(./images/hexes-oh-my.png) center 0 no-repeat;
+    background-color: white;
+    background-image: url(https://signin.brightcove.com/cdn/images/hexes-oh-my.png), url(https://signin.brightcove.com/cdn/images/hexes-gradient-backer.png);
+    background-repeat-x: no-repeat, repeat;
+    background-repeat-y: no-repeat, no-repeat;
+    background-attachment: initial, initial;
+    background-position-x: 50%, 0px;
+    background-position-y: 0px, 0px;
+    background-origin: initial, initial;
+    background-clip: initial, initial;
+    font-family: arial, helvetica, sans-serif;
+  }
+  
+  .logo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+  }
+  
+  h1 {
+    text-align: center;
+    font-size: 22px;
+    margin: 50px 0px 5px 0px;
+    color: #373737;
+  }
+  
+  h2 {
+    text-align: left;
+    font-size: 18px;
+    font-weight: normal;
+    margin: 20px 0px 50px 0px;
+    color: #9C9C9C
+  }
+  
+  #click {
+    border: solid 1px #9CB03D;
+    background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#B2C846), to(#94A738));
+    padding: 10px 15px;
+    font-size: 14px;
+    color: white;
+    font-family: arial, helvetica, sans-serif;
+    font-weight: bold;
+    text-shadow: 0 1px 1px #333;
+    border-radius: 5px;
+    ms-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -khtml-border-radius: 5px;
+    cursor: pointer;
+    display: inline;
+    margin: 30px 0;
+    background-color: transparent;
+  }
+  
+  .container {
+    margin: auto;
+    width: 1024px;
+  }
+  
+  input {
+    font-size: 18px;
+    font-family: arial, helvetica, sans-serif;
+    height: 25px;
+    width: 370px;
+    margin: 0 auto;
+    color: #6F6F6F;
+    padding: 7px 5px;
+    border: 1px solid #CACACA;
+    border-radius: 3px;
+    ms-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -khtml-border-radius: 5px;
+  }
+</style>
 <script src="versions.js"></script>
 <script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
 <script>
@@ -35,11 +114,13 @@
 </script>
 </head>
 <body>
-<h1> Debug that shit son!</h1>
-<input id="unique_id" type="text" value="3737" />
-<div id="click">Click me!</div>
-<img src="images/weinre-icon-128x128.png">
-
+  <img src="https://signin.brightcove.com/cdn/images/logo-app-cloud.png" class="logo">
+  <div class="container">
+    <h1>Welcome to AppCloud's debugging portal.</h1>
+    <h2>To get started enter the a unique ID to identify yourself or use the unique ID we have generate below.  Once you have your ID selected hit the "debug" button below, shake your phone and then scan the QR code found on the next page.  Happy Debugging</h2>
+    <input id="unique_id" type="text" value="3737" />
+    <div id="click">Debug</div>
+  </div>
 <script src="index.js"></script>
 
 </body>
