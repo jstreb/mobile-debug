@@ -47,6 +47,8 @@ module.exports = WeinreClientEventsImpl = (function() {
 
   WeinreClientEventsImpl.prototype.connectionCreated = function(clientChannel, targetChannel) {
     var target;
+    var connected = location.href.split( "connected=" )[1].split( "&" )[0].split( "#" )[0] === "true";
+    
     if (!this.client.uiAvailable()) return;
     WebInspector.panels.remote.setClientState(clientChannel, "connected");
     WebInspector.panels.remote.setTargetState(targetChannel, "connected");
@@ -58,6 +60,11 @@ module.exports = WeinreClientEventsImpl = (function() {
     if (!target) return;
     document.title = titleConnectedPrefix + target.url;
     WebInspector.inspectedURLChanged(target.url);
+    if( !connected ) {
+      window.parent.location.href = location.href.replace( "connected=false", "connected=true" );
+      return;
+    }
+    alert( "gots my connection" );
     return Weinre.WeinreExtraClientCommands.getDatabases(function(databaseRecords) {
       return WeinreExtraTargetEventsImpl.addDatabaseRecords(databaseRecords);
     });

@@ -27,8 +27,8 @@ utils  = require './utils'
 weinre = require './weinre'
 
 optionDefaults = 
-    httpPort:     8080
-    boundHost:    'localhost'
+    httpPort:     3737
+    boundHost:    '10.1.11.124'
     verbose:      false
     debug:        false
     readTimeout:  5

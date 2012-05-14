@@ -17,6 +17,18 @@
  * under the License.
  */
 
+.notconnected #toolbar {
+  display: none;
+}
+
+.notconnected #main {
+  display: none;
+}
+
+.notconnected #drawer {
+  display: none;
+}
+
 .toolbar-item.remote .toolbar-icon {
     background-image: url(../../images/weinre-icon-32x32.png);
 }
